@@ -1,0 +1,794 @@
+
+===== Results of comparing two JARs =====
+
+Comparing 3683 classes from C:\Program Files (x86)\Android\sdk\platforms\android-22\android.jar
+To 3673 classes from C:\Program Files (x86)\Android\sdk\platforms\android-21\android.jar
+
+public abstract static interface android.provider.Telephony$BaseMmsColumns extends BaseColumns {
++    public static final String SUBSCRIPTION_ID;
+}
+
+public abstract static interface android.provider.Telephony$TextBasedSmsColumns {
++    public static final String SUBSCRIPTION_ID;
+}
+
+- public class android.view.animation.AnticipateOvershootInterpolator extends Object implements Interpolator {
+* public class android.view.animation.AnticipateOvershootInterpolator extends BaseInterpolator {
+}
+
++ public abstract class android.view.animation.BaseInterpolator extends Object implements Interpolator {
++    public BaseInterpolator();
++  }
+
+- public class android.view.animation.PathInterpolator extends Object implements Interpolator {
+* public class android.view.animation.PathInterpolator extends BaseInterpolator {
+}
+
+public abstract class android.bluetooth.BluetoothGattServerCallback extends Object {
++    public void onMtuChanged(BluetoothDevice, int);
+}
+
+public class android.app.Activity extends ContextThemeWrapper implements LayoutInflater$Factory2, Window$Callback, KeyEvent$Callback, View$OnCreateContextMenuListener, ComponentCallbacks2 {
++    public Uri getReferrer();
+}
+
+public final class android.graphics.Outline extends Object {
++    public void offset(int, int);
+}
+
+- public class android.webkit.WebBackForwardList extends Object implements Cloneable, Serializable {
+* public abstract class android.webkit.WebBackForwardList extends Object implements Cloneable, Serializable {
+-    WebBackForwardList();
++    public WebBackForwardList();
+-    protected synchronized WebBackForwardList clone();
+-    public synchronized int getSize();
+-    public synchronized WebHistoryItem getItemAtIndex(int);
+-    public synchronized WebHistoryItem getCurrentItem();
+-    public synchronized int getCurrentIndex();
++    protected abstract WebBackForwardList clone();
++    public abstract int getSize();
++    public abstract WebHistoryItem getItemAtIndex(int);
++    public abstract WebHistoryItem getCurrentItem();
++    public abstract int getCurrentIndex();
+}
+
+public class android.widget.TextView extends View implements ViewTreeObserver$OnPreDrawListener {
+-    public boolean performAccessibilityAction(int, Bundle);
+}
+
+public class android.graphics.drawable.RotateDrawable extends Drawable implements Drawable$Callback {
++    public void applyTheme(Resources$Theme);
++    public boolean canApplyTheme();
+}
+
+- public class android.view.animation.BounceInterpolator extends Object implements Interpolator {
+* public class android.view.animation.BounceInterpolator extends BaseInterpolator {
+}
+
+public class android.graphics.drawable.ScaleDrawable extends Drawable implements Drawable$Callback {
++    public void applyTheme(Resources$Theme);
++    public boolean canApplyTheme();
+}
+
+public class android.animation.TimeAnimator extends ValueAnimator {
++    public void setCurrentPlayTime(long);
+}
+
+public final class android.provider.Settings extends Object {
++    public static final String ACTION_BATTERY_SAVER_SETTINGS;
++    public static final String ACTION_NOTIFICATION_LISTENER_SETTINGS;
+}
+
+public class android.graphics.drawable.AnimationDrawable extends DrawableContainer implements Runnable, Animatable {
++    protected void setConstantState(DrawableContainer$DrawableContainerState);
+}
+
+public class android.net.VpnService extends Service {
++    public boolean setUnderlyingNetworks(Network[]);
+}
+
+public final class android.media.session.MediaSession extends Object {
++    public void setRatingType(int);
+}
+
+public static final class android.R$style extends Object {
++    public static final int Theme_DeviceDefault_Dialog_Alert;
++    public static final int Theme_DeviceDefault_Light_Dialog_Alert;
+}
+
++ public class android.telephony.SubscriptionManager extends Object {
++    SubscriptionManager();
++    public static final int DATA_ROAMING_DISABLE;
++    public static final int DATA_ROAMING_ENABLE;
++    public static SubscriptionManager from(Context);
++    public List getActiveSubscriptionInfoList();
++    public SubscriptionInfo getActiveSubscriptionInfo(int);
++    public boolean isNetworkRoaming(int);
++    public int getActiveSubscriptionInfoCount();
++    public void addOnSubscriptionsChangedListener(SubscriptionManager$OnSubscriptionsChangedListener);
++    public SubscriptionInfo getActiveSubscriptionInfoForSimSlotIndex(int);
++    public void removeOnSubscriptionsChangedListener(SubscriptionManager$OnSubscriptionsChangedListener);
++    public int getActiveSubscriptionInfoCountMax();
++  }
+
+public class android.telephony.TelephonyManager extends Object {
++    public boolean setVoiceMailNumber(String, String);
++    public boolean setLine1NumberForDisplay(String, String);
++    public boolean hasCarrierPrivileges();
++    public boolean setOperatorBrandOverride(String);
++    public boolean isVoiceCapable();
++    public boolean setPreferredNetworkTypeToGlobal();
+}
+
+public static final class android.provider.Telephony$Carriers extends Object implements BaseColumns {
++    public static final String SUBSCRIPTION_ID;
+}
+
+public class android.widget.PopupWindow extends Object {
++    public void setAttachedInDecor(boolean);
++    public boolean isAttachedInDecor();
+}
+
+public class android.graphics.drawable.AnimatedStateListDrawable extends StateListDrawable {
++    protected void setConstantState(DrawableContainer$DrawableContainerState);
++    public void applyTheme(Resources$Theme);
+}
+
+public class android.graphics.drawable.RippleDrawable extends LayerDrawable {
++    public void invalidateSelf();
+}
+
+public class android.content.pm.PackageItemInfo extends Object {
++    public Drawable loadUnbadgedIcon(PackageManager);
+}
+
+public class android.media.tv.TvView extends ViewGroup {
++    protected void dispatchDraw(Canvas);
++    public boolean gatherTransparentRegion(Region);
++    public void draw(Canvas);
+}
+
+public class android.content.pm.PackageInfo extends Object implements Parcelable {
++    public int baseRevisionCode;
++    public int[] splitRevisionCodes;
+}
+
+public class android.net.VpnService$Builder extends Object {
++    public VpnService$Builder setUnderlyingNetworks(Network[]);
+}
+
++ public static final class android.service.carrier.CarrierMessagingService$SendMultipartSmsResult extends Object {
++    public CarrierMessagingService$SendMultipartSmsResult(int, int[]);
++    public int getSendStatus();
++    public int[] getMessageRefs();
++  }
+
+public class android.accounts.AccountManager extends Object {
++    public AccountManagerFuture removeAccount(Account, Activity, AccountManagerCallback, Handler);
++    public boolean removeAccountExplicitly(Account);
+}
+
+public final class android.media.session.PlaybackState extends Object implements Parcelable {
++    public Bundle getExtras();
+}
+
+public class android.content.res.TypedArray extends Object {
++    public boolean hasValueOrEmpty(int);
+}
+
+public class android.util.TypedValue extends Object {
++    public static final int DATA_NULL_EMPTY;
++    public static final int DATA_NULL_UNDEFINED;
++    public int getComplexUnit();
+}
+
+public class android.transition.ChangeBounds extends Transition {
++    public boolean getResizeClip();
+}
+
+public class android.content.Intent extends Object implements Parcelable, Cloneable {
++    public static final String EXTRA_CHOSEN_COMPONENT;
++    public static final String EXTRA_CHOSEN_COMPONENT_INTENT_SENDER;
++    public static final String EXTRA_REFERRER_NAME;
++    public static final int URI_ALLOW_UNSAFE;
++    public static final int URI_ANDROID_APP_SCHEME;
++    public static Intent createChooser(Intent, CharSequence, IntentSender);
+}
+
+public final class android.os.Message extends Object implements Parcelable {
++    public boolean isAsynchronous();
++    public void setAsynchronous(boolean);
+}
+
+public static final class android.app.Notification$WearableExtender extends Object implements Notification$Extender {
++    public static final int SCREEN_TIMEOUT_LONG;
++    public static final int SCREEN_TIMEOUT_SHORT;
++    public Notification$WearableExtender setHintScreenTimeout(int);
++    public int getHintScreenTimeout();
++    public Notification$WearableExtender setHintAvoidBackgroundClipping(boolean);
++    public boolean getHintAvoidBackgroundClipping();
+}
+
+public abstract class android.widget.AbsListView extends AdapterView implements TextWatcher, ViewTreeObserver$OnGlobalLayoutListener, Filter$FilterListener, ViewTreeObserver$OnTouchModeChangeListener {
++    public void dispatchDrawableHotspotChanged(float, float);
+}
+
+- public class android.view.animation.AccelerateDecelerateInterpolator extends Object implements Interpolator {
+* public class android.view.animation.AccelerateDecelerateInterpolator extends BaseInterpolator {
+}
+
+public class android.view.accessibility.AccessibilityNodeInfo extends Object implements Parcelable {
++    public AccessibilityNodeInfo getTraversalBefore();
++    public void setTraversalBefore(View);
++    public void setTraversalBefore(View, int);
++    public void setTraversalAfter(View);
++    public void setTraversalAfter(View, int);
++    public AccessibilityNodeInfo getTraversalAfter();
+}
+
+public static final class android.media.tv.TvContract$Programs$Genres extends Object {
++    public static final String ARTS;
++    public static final String ENTERTAINMENT;
++    public static final String LIFE_STYLE;
++    public static final String MUSIC;
++    public static final String PREMIER;
++    public static final String TECH_SCIENCE;
+}
+
+- public class android.view.animation.CycleInterpolator extends Object implements Interpolator {
+* public class android.view.animation.CycleInterpolator extends BaseInterpolator {
+}
+
++ public abstract static interface android.service.carrier.CarrierMessagingService$ResultCallback {
++    public abstract void onReceiveResult(Object) throws RemoteException;
++  }
+
++ public static final class android.service.carrier.CarrierMessagingService$SendSmsResult extends Object {
++    public CarrierMessagingService$SendSmsResult(int, int);
++    public int getSendStatus();
++    public int getMessageRef();
++  }
+
+- public class android.webkit.CookieManager extends Object {
+* public abstract class android.webkit.CookieManager extends Object {
+-    CookieManager();
++    public CookieManager();
+-    public void flush();
+-    public void removeAllCookies(ValueCallback);
+-    public void removeAllCookie();
+-    public void setAcceptThirdPartyCookies(WebView, boolean);
+-    public boolean acceptThirdPartyCookies(WebView);
+-    public synchronized void setAcceptCookie(boolean);
+-    public void removeSessionCookie();
+-    public void removeSessionCookies(ValueCallback);
+-    public void removeExpiredCookie();
+-    public void setCookie(String, String);
+-    public void setCookie(String, String, ValueCallback);
+-    public String getCookie(String);
+-    public synchronized boolean acceptCookie();
+-    public synchronized boolean hasCookies();
++    public abstract void flush();
++    public abstract void removeAllCookies(ValueCallback);
++    public abstract void removeAllCookie();
++    public abstract void setAcceptThirdPartyCookies(WebView, boolean);
++    public abstract boolean acceptThirdPartyCookies(WebView);
++    public abstract void setAcceptCookie(boolean);
++    public abstract void removeSessionCookie();
++    public abstract void removeSessionCookies(ValueCallback);
++    public abstract void removeExpiredCookie();
++    public abstract void setCookie(String, String);
++    public abstract void setCookie(String, String, ValueCallback);
++    public abstract String getCookie(String);
++    public abstract boolean acceptCookie();
++    public abstract boolean hasCookies();
+}
+
+public static class android.view.WindowManager$LayoutParams extends ViewGroup$LayoutParams implements Parcelable {
++    public static final int FLAG_LAYOUT_ATTACHED_IN_DECOR;
++    public static final int TYPE_ACCESSIBILITY_OVERLAY;
+}
+
+public final class android.media.MediaDrm extends Object {
++    public native byte[] getSecureStop(byte[]);
++    public native void releaseAllSecureStops();
+}
+
+public class android.util.DisplayMetrics extends Object {
++    public static final int DENSITY_280;
+}
+
+- public class android.webkit.WebIconDatabase extends Object {
+* public abstract class android.webkit.WebIconDatabase extends Object {
+-    WebIconDatabase();
++    public WebIconDatabase();
+-    public void close();
+-    public void open(String);
+-    public void requestIconForPageUrl(String, WebIconDatabase$IconListener);
+-    public void retainIconForPageUrl(String);
+-    public void releaseIconForPageUrl(String);
+-    public void removeAllIcons();
++    public abstract void close();
++    public abstract void open(String);
++    public abstract void requestIconForPageUrl(String, WebIconDatabase$IconListener);
++    public abstract void retainIconForPageUrl(String);
++    public abstract void releaseIconForPageUrl(String);
++    public abstract void removeAllIcons();
+}
+
++ public static final class android.service.carrier.CarrierMessagingService$SendMmsResult extends Object {
++    public CarrierMessagingService$SendMmsResult(int, byte[]);
++    public int getSendStatus();
++    public byte[] getSendConfPdu();
++  }
+
+- public class android.view.animation.OvershootInterpolator extends Object implements Interpolator {
+* public class android.view.animation.OvershootInterpolator extends BaseInterpolator {
+}
+
+- public class android.view.animation.DecelerateInterpolator extends Object implements Interpolator {
+* public class android.view.animation.DecelerateInterpolator extends BaseInterpolator {
+}
+
+public class android.graphics.drawable.GradientDrawable extends Drawable {
++    public void setTintList(ColorStateList);
++    public void setTintMode(PorterDuff$Mode);
+}
+
+public class android.os.BaseBundle extends Object {
++    public boolean getBoolean(String);
++    public boolean getBoolean(String, boolean);
++    public void putBoolean(String, boolean);
++    public void putBooleanArray(String, boolean[]);
++    public boolean[] getBooleanArray(String);
+}
+
+public class android.graphics.drawable.ColorDrawable extends Drawable {
++    public boolean canApplyTheme();
+}
+
+- public class android.webkit.WebHistoryItem extends Object implements Cloneable {
+* public abstract class android.webkit.WebHistoryItem extends Object implements Cloneable {
+-    WebHistoryItem();
++    public WebHistoryItem();
+-    protected synchronized WebHistoryItem clone();
+-    public String getUrl();
+-    public String getTitle();
+-    public String getOriginalUrl();
+-    public Bitmap getFavicon();
++    protected abstract WebHistoryItem clone();
++    public abstract String getUrl();
++    public abstract String getTitle();
++    public abstract String getOriginalUrl();
++    public abstract Bitmap getFavicon();
+}
+
+public abstract class android.accessibilityservice.AccessibilityService extends Service {
++    public Object getSystemService(String);
+}
+
+public class android.widget.PopupMenu extends Object {
++    public PopupMenu(Context, View, int, int, int);
+}
+
+public abstract class android.view.ViewGroup extends View implements ViewParent, ViewManager {
+-    public void drawableHotspotChanged(float, float);
++    public boolean onNestedPrePerformAccessibilityAction(View, int, Bundle);
++    public void dispatchDrawableHotspotChanged(float, float);
+}
+
+public final class android.os.Bundle extends BaseBundle implements Cloneable, Parcelable {
+-    public boolean getBoolean(String, boolean);
+-    public boolean getBoolean(String);
+-    public void putBoolean(String, boolean);
+-    public void putBooleanArray(String, boolean[]);
+-    public boolean[] getBooleanArray(String);
+}
+
+public abstract class android.webkit.WebSettings extends Object {
+-    WebSettings();
++    public WebSettings();
+-    public synchronized String getDatabasePath();
+-    public void setBuiltInZoomControls(boolean);
+-    public void setAllowFileAccess(boolean);
+-    public void setAllowContentAccess(boolean);
+-    public boolean getAllowContentAccess();
+-    public void setLoadWithOverviewMode(boolean);
+-    public void setSupportZoom(boolean);
+-    public boolean getBuiltInZoomControls();
+-    public void setDisplayZoomControls(boolean);
+-    public boolean getDisplayZoomControls();
+-    public boolean getAllowFileAccess();
+-    public boolean getMediaPlaybackRequiresUserGesture();
+-    public synchronized void setJavaScriptCanOpenWindowsAutomatically(boolean);
+-    public void setMediaPlaybackRequiresUserGesture(boolean);
+-    public synchronized boolean getJavaScriptCanOpenWindowsAutomatically();
+-    public boolean supportZoom();
+-    public int getCacheMode();
+-    public synchronized int getTextZoom();
+-    public synchronized void setTextZoom(int);
+-    public void setCacheMode(int);
+-    public synchronized int getMinimumLogicalFontSize();
+-    public synchronized String getFixedFontFamily();
+-    public synchronized void setStandardFontFamily(String);
+-    public synchronized void setAppCacheMaxSize(long);
+-    public synchronized void setLoadsImagesAutomatically(boolean);
+-    public synchronized String getDefaultTextEncodingName();
+-    public synchronized void setAppCacheEnabled(boolean);
+-    public WebSettings$ZoomDensity getDefaultZoom();
+-    public synchronized void setDefaultFixedFontSize(int);
+-    public synchronized void setCursiveFontFamily(String);
+-    public boolean enableSmoothTransition();
+-    public synchronized String getSansSerifFontFamily();
+-    public synchronized void setSansSerifFontFamily(String);
+-    public synchronized boolean getBlockNetworkLoads();
+-    public synchronized String getUserAgentString();
+-    public synchronized void setRenderPriority(WebSettings$RenderPriority);
+-    public synchronized void setFixedFontFamily(String);
+-    public synchronized void setMinimumFontSize(int);
+-    public synchronized void setDefaultFontSize(int);
+-    public synchronized void setBlockNetworkImage(boolean);
+-    public boolean getLoadWithOverviewMode();
+-    public synchronized void setGeolocationDatabasePath(String);
+-    public synchronized void setAppCachePath(String);
+-    public synchronized void setDatabaseEnabled(boolean);
+-    public void setSavePassword(boolean);
+-    public synchronized int getMinimumFontSize();
+-    public synchronized boolean getDomStorageEnabled();
+-    public synchronized void setSerifFontFamily(String);
+-    public boolean getSaveFormData();
+-    public boolean getLightTouchEnabled();
+-    public synchronized String getFantasyFontFamily();
+-    public synchronized void setPluginState(WebSettings$PluginState);
+-    public synchronized boolean supportMultipleWindows();
+-    public synchronized void setLayoutAlgorithm(WebSettings$LayoutAlgorithm);
+-    public synchronized String getStandardFontFamily();
+-    public synchronized void setMinimumLogicalFontSize(int);
+-    public synchronized void setDomStorageEnabled(boolean);
+-    public synchronized void setGeolocationEnabled(boolean);
+-    public synchronized boolean getJavaScriptEnabled();
+-    public synchronized WebSettings$LayoutAlgorithm getLayoutAlgorithm();
+-    public synchronized int getDefaultFontSize();
+-    public synchronized boolean getLoadsImagesAutomatically();
+-    public synchronized void setSupportMultipleWindows(boolean);
+-    public synchronized int getDefaultFixedFontSize();
+-    public synchronized void setBlockNetworkLoads(boolean);
+-    public synchronized void setUseWideViewPort(boolean);
+-    public synchronized String getSerifFontFamily();
+-    public synchronized void setDatabasePath(String);
+-    public synchronized boolean getDatabaseEnabled();
+-    public void setSaveFormData(boolean);
+-    public void setDefaultZoom(WebSettings$ZoomDensity);
+-    public void setLightTouchEnabled(boolean);
+-    public synchronized void setFantasyFontFamily(String);
+-    public synchronized void setDefaultTextEncodingName(String);
+-    public synchronized void setUserAgentString(String);
+-    public synchronized boolean getUseWideViewPort();
+-    public synchronized void setJavaScriptEnabled(boolean);
+-    public synchronized WebSettings$PluginState getPluginState();
+-    public synchronized String getCursiveFontFamily();
+-    public void setNeedInitialFocus(boolean);
+-    public boolean getSavePassword();
+-    public synchronized boolean getBlockNetworkImage();
+-    public void setEnableSmoothTransition(boolean);
++    public abstract String getDatabasePath();
++    public abstract void setBuiltInZoomControls(boolean);
++    public abstract void setAllowFileAccess(boolean);
++    public abstract void setAllowContentAccess(boolean);
++    public abstract boolean getAllowContentAccess();
++    public abstract void setLoadWithOverviewMode(boolean);
++    public abstract void setSupportZoom(boolean);
++    public abstract boolean getBuiltInZoomControls();
++    public abstract void setDisplayZoomControls(boolean);
++    public abstract boolean getDisplayZoomControls();
++    public abstract boolean getAllowFileAccess();
++    public abstract boolean getMediaPlaybackRequiresUserGesture();
++    public abstract void setJavaScriptCanOpenWindowsAutomatically(boolean);
++    public abstract void setMediaPlaybackRequiresUserGesture(boolean);
++    public abstract boolean getJavaScriptCanOpenWindowsAutomatically();
++    public abstract boolean supportZoom();
++    public abstract int getCacheMode();
++    public abstract int getTextZoom();
++    public abstract void setTextZoom(int);
++    public abstract void setCacheMode(int);
++    public abstract int getMinimumLogicalFontSize();
++    public abstract String getFixedFontFamily();
++    public abstract void setStandardFontFamily(String);
++    public abstract void setAppCacheMaxSize(long);
++    public abstract void setLoadsImagesAutomatically(boolean);
++    public abstract String getDefaultTextEncodingName();
++    public abstract void setAppCacheEnabled(boolean);
++    public abstract WebSettings$ZoomDensity getDefaultZoom();
++    public abstract void setDefaultFixedFontSize(int);
++    public abstract void setCursiveFontFamily(String);
++    public abstract boolean enableSmoothTransition();
++    public abstract String getSansSerifFontFamily();
++    public abstract void setSansSerifFontFamily(String);
++    public abstract boolean getBlockNetworkLoads();
++    public abstract String getUserAgentString();
++    public abstract void setRenderPriority(WebSettings$RenderPriority);
++    public abstract void setFixedFontFamily(String);
++    public abstract void setMinimumFontSize(int);
++    public abstract void setDefaultFontSize(int);
++    public abstract void setBlockNetworkImage(boolean);
++    public abstract boolean getLoadWithOverviewMode();
++    public abstract void setGeolocationDatabasePath(String);
++    public abstract void setAppCachePath(String);
++    public abstract void setDatabaseEnabled(boolean);
++    public abstract void setSavePassword(boolean);
++    public abstract int getMinimumFontSize();
++    public abstract boolean getDomStorageEnabled();
++    public abstract void setSerifFontFamily(String);
++    public abstract boolean getSaveFormData();
++    public abstract boolean getLightTouchEnabled();
++    public abstract String getFantasyFontFamily();
++    public abstract void setPluginState(WebSettings$PluginState);
++    public abstract boolean supportMultipleWindows();
++    public abstract void setLayoutAlgorithm(WebSettings$LayoutAlgorithm);
++    public abstract String getStandardFontFamily();
++    public abstract void setMinimumLogicalFontSize(int);
++    public abstract void setDomStorageEnabled(boolean);
++    public abstract void setGeolocationEnabled(boolean);
++    public abstract boolean getJavaScriptEnabled();
++    public abstract WebSettings$LayoutAlgorithm getLayoutAlgorithm();
++    public abstract int getDefaultFontSize();
++    public abstract boolean getLoadsImagesAutomatically();
++    public abstract void setSupportMultipleWindows(boolean);
++    public abstract int getDefaultFixedFontSize();
++    public abstract void setBlockNetworkLoads(boolean);
++    public abstract void setUseWideViewPort(boolean);
++    public abstract String getSerifFontFamily();
++    public abstract void setDatabasePath(String);
++    public abstract boolean getDatabaseEnabled();
++    public abstract void setSaveFormData(boolean);
++    public abstract void setDefaultZoom(WebSettings$ZoomDensity);
++    public abstract void setLightTouchEnabled(boolean);
++    public abstract void setFantasyFontFamily(String);
++    public abstract void setDefaultTextEncodingName(String);
++    public abstract void setUserAgentString(String);
++    public abstract boolean getUseWideViewPort();
++    public abstract void setJavaScriptEnabled(boolean);
++    public abstract WebSettings$PluginState getPluginState();
++    public abstract String getCursiveFontFamily();
++    public abstract void setNeedInitialFocus(boolean);
++    public abstract boolean getSavePassword();
++    public abstract boolean getBlockNetworkImage();
++    public abstract void setEnableSmoothTransition(boolean);
+}
+
+public class android.graphics.drawable.LevelListDrawable extends DrawableContainer {
++    protected void setConstantState(DrawableContainer$DrawableContainerState);
+}
+
+public static class android.os.Build$VERSION_CODES extends Object {
++    public static final int LOLLIPOP_MR1;
+}
+
+public class android.text.format.DateFormat extends Object {
+-    public static final char AM_PM;
+-    public static final char CAPITAL_AM_PM;
+-    public static final char DATE;
+-    public static final char DAY;
+-    public static final char HOUR;
+-    public static final char HOUR_OF_DAY;
+-    public static final char MINUTE;
+-    public static final char MONTH;
+-    public static final char QUOTE;
+-    public static final char SECONDS;
+-    public static final char STANDALONE_MONTH;
+-    public static final char TIME_ZONE;
+-    public static final char YEAR;
+}
+
+- public class android.view.animation.AccelerateInterpolator extends Object implements Interpolator {
+* public class android.view.animation.AccelerateInterpolator extends BaseInterpolator {
+}
+
+public abstract interface android.view.ViewParent {
++    public abstract boolean onNestedPrePerformAccessibilityAction(View, int, Bundle);
+}
+
+public class android.app.admin.DevicePolicyManager extends Object {
++    public static final String EXTRA_PROVISIONING_ACCOUNT_TO_MIGRATE;
++    public static final String EXTRA_PROVISIONING_LEAVE_ALL_SYSTEM_APPS_ENABLED;
++    public static final int WIPE_RESET_PROTECTION_DATA;
+}
+
+public static final class android.R$attr extends Object {
++    public static final int accessibilityTraversalAfter;
++    public static final int accessibilityTraversalBefore;
++    public static final int collapseContentDescription;
++    public static final int dialogPreferredPadding;
++    public static final int resizeClip;
++    public static final int revisionCode;
++    public static final int searchHintIcon;
+}
+
+public static final class android.app.Notification$Action$WearableExtender extends Object implements Notification$Action$Extender {
++    public CharSequence getCancelLabel();
++    public Notification$Action$WearableExtender setCancelLabel(CharSequence);
++    public Notification$Action$WearableExtender setInProgressLabel(CharSequence);
++    public CharSequence getInProgressLabel();
++    public CharSequence getConfirmLabel();
++    public Notification$Action$WearableExtender setConfirmLabel(CharSequence);
+}
+
+public static final class android.media.session.PlaybackState$Builder extends Object {
++    public PlaybackState$Builder setExtras(Bundle);
+}
+
+public final class android.telephony.SmsManager extends Object {
++    public static final String EXTRA_MMS_HTTP_STATUS;
++    public static final String MMS_CONFIG_SHOW_CELL_BROADCAST_APP_LINKS;
++    public static final int MMS_ERROR_NO_DATA_NETWORK;
++    public int getSubscriptionId();
++    public static int getDefaultSmsSubscriptionId();
++    public static SmsManager getSmsManagerForSubscriptionId(int);
++    public void injectSmsPdu(byte[], String, PendingIntent);
+}
+
+- public class android.view.animation.LinearInterpolator extends Object implements Interpolator {
+* public class android.view.animation.LinearInterpolator extends BaseInterpolator {
+}
+
+- public class android.view.animation.AnticipateInterpolator extends Object implements Interpolator {
+* public class android.view.animation.AnticipateInterpolator extends BaseInterpolator {
+}
+
+public class android.widget.CalendarView extends FrameLayout {
+-    public boolean isEnabled();
+-    public void setEnabled(boolean);
+}
+
+public abstract class android.view.Window extends Object {
++    public void setClipToOutline(boolean);
++    public void setElevation(float);
++    public static int getDefaultFeatures(Context);
+}
+
++ public static class android.telephony.SubscriptionManager$OnSubscriptionsChangedListener extends Object {
++    public SubscriptionManager$OnSubscriptionsChangedListener();
++    public void onSubscriptionsChanged();
++  }
+
+public class android.graphics.drawable.ClipDrawable extends Drawable implements Drawable$Callback {
++    public void applyTheme(Resources$Theme);
++    public boolean canApplyTheme();
++    public Drawable mutate();
+}
+
++ public abstract class android.service.carrier.CarrierMessagingService extends Service {
++    public CarrierMessagingService();
++    public static final int DOWNLOAD_STATUS_ERROR;
++    public static final int DOWNLOAD_STATUS_OK;
++    public static final int DOWNLOAD_STATUS_RETRY_ON_CARRIER_NETWORK;
++    public static final int SEND_STATUS_ERROR;
++    public static final int SEND_STATUS_OK;
++    public static final int SEND_STATUS_RETRY_ON_CARRIER_NETWORK;
++    public static final String SERVICE_INTERFACE;
++    public IBinder onBind(Intent);
++    public void onSendDataSms(byte[], int, String, int, CarrierMessagingService$ResultCallback);
++    public void onDownloadMms(Uri, int, Uri, CarrierMessagingService$ResultCallback);
++    public void onSendTextSms(String, int, String, CarrierMessagingService$ResultCallback);
++    public void onSendMms(Uri, int, Uri, CarrierMessagingService$ResultCallback);
++    public void onFilterSms(MessagePdu, String, int, int, CarrierMessagingService$ResultCallback);
++    public void onSendMultipartTextSms(List, int, String, CarrierMessagingService$ResultCallback);
++  }
+
++ public final class android.service.carrier.MessagePdu extends Object implements Parcelable {
++    public MessagePdu(List);
++    public static final Parcelable$Creator CREATOR;
++    public int describeContents();
++    public void writeToParcel(Parcel, int);
++    public List getPdus();
++  }
+
+public abstract class android.content.Context extends Object {
++    public static final String TELEPHONY_SUBSCRIPTION_SERVICE;
++    public static final String USAGE_STATS_SERVICE;
+}
+
+- public class android.webkit.WebViewDatabase extends Object {
+* public abstract class android.webkit.WebViewDatabase extends Object {
+-    WebViewDatabase();
++    public WebViewDatabase();
+-    public boolean hasUsernamePassword();
+-    public void clearHttpAuthUsernamePassword();
+-    public void clearUsernamePassword();
+-    public boolean hasHttpAuthUsernamePassword();
+-    public boolean hasFormData();
+-    public void clearFormData();
++    public abstract boolean hasUsernamePassword();
++    public abstract void clearHttpAuthUsernamePassword();
++    public abstract void clearUsernamePassword();
++    public abstract boolean hasHttpAuthUsernamePassword();
++    public abstract boolean hasFormData();
++    public abstract void clearFormData();
+}
+
+public class android.widget.RemoteViews extends Object implements Parcelable, LayoutInflater$Filter {
++    public void setAccessibilityTraversalBefore(int, int);
++    public void setAccessibilityTraversalAfter(int, int);
+}
+
+public class android.net.Network extends Object implements Parcelable {
++    public void bindSocket(DatagramSocket) throws IOException;
+}
+
+- public class android.animation.StateListAnimator extends Object {
+* public class android.animation.StateListAnimator extends Object implements Cloneable {
++    public volatile Object clone() throws CloneNotSupportedException;
++    public StateListAnimator clone();
+}
+
+public class android.net.ConnectivityManager extends Object {
++    public static final String EXTRA_NETWORK;
++    public static final String EXTRA_NETWORK_REQUEST;
++    public void releaseNetworkRequest(PendingIntent);
++    public void requestNetwork(NetworkRequest, PendingIntent);
+}
+
+public static final class android.provider.Telephony$MmsSms$PendingMessages extends Object implements BaseColumns {
++    public static final String SUBSCRIPTION_ID;
+}
+
++ public class android.telephony.SubscriptionInfo extends Object implements Parcelable {
++    SubscriptionInfo();
++    public static final Parcelable$Creator CREATOR;
++    public String toString();
++    public String getNumber();
++    public CharSequence getDisplayName();
++    public int describeContents();
++    public void writeToParcel(Parcel, int);
++    public int getSubscriptionId();
++    public int getSimSlotIndex();
++    public Bitmap createIconBitmap(Context);
++    public int getDataRoaming();
++    public CharSequence getCarrierName();
++    public int getMnc();
++    public int getMcc();
++    public int getIconTint();
++    public String getIccId();
++    public String getCountryIso();
++  }
+
+public class android.graphics.drawable.StateListDrawable extends DrawableContainer {
++    protected void setConstantState(DrawableContainer$DrawableContainerState);
++    public void applyTheme(Resources$Theme);
+}
+
+public static final class android.Manifest$permission extends Object {
++    public static final String BIND_CARRIER_MESSAGING_SERVICE;
+}
+
+public class android.animation.ValueAnimator extends Animator {
++    public void setCurrentFraction(float);
+}
+
+public class android.os.UserManager extends Object {
++    public static final String DISALLOW_OUTGOING_BEAM;
++    public static final String KEY_RESTRICTIONS_PENDING;
+}
+
+public class android.view.View extends Object implements Drawable$Callback, KeyEvent$Callback, AccessibilityEventSource {
++    public void dispatchDrawableHotspotChanged(float, float);
++    public void setAccessibilityTraversalBefore(int);
++    public void setAccessibilityTraversalAfter(int);
++    public int getAccessibilityTraversalAfter();
++    public int getAccessibilityTraversalBefore();
++    public boolean dispatchNestedPrePerformAccessibilityAction(int, Bundle);
+}
+
+public class android.app.KeyguardManager extends Object {
++    public boolean isDeviceLocked();
+}
+
+public abstract class android.hardware.camera2.CameraMetadata extends Object {
++    public static final int CONTROL_SCENE_MODE_HDR;
++    public static final int REQUEST_AVAILABLE_CAPABILITIES_BURST_CAPTURE;
++    public static final int REQUEST_AVAILABLE_CAPABILITIES_READ_SENSOR_SETTINGS;
+}
+
+public final class android.view.accessibility.AccessibilityWindowInfo extends Object implements Parcelable {
++    public static final int TYPE_ACCESSIBILITY_OVERLAY;
+}
+
